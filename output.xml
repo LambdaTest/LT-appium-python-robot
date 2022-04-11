@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.9.12 on darwin)" generated="20220406 21:20:40.254" rpa="false" schemaversion="2">
+<suite id="s1" name="Android" source="/Users/admin/Documents/Robot-Selenium-Sample/Tests/Android.robot">
+<test id="s1-t1" name="Example of connecting to Lambdatest via Robot Framework">
+<kw name="Open test app" library="Common" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platform}</arg>
+<arg>platformVersion=${version}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>app=${app}</arg>
+<arg>name="RobotFramework Lambda Test"</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220406 21:20:40.472" endtime="20220406 21:20:54.702"/>
+</kw>
+<timeout value="50 minutes"/>
+<status status="PASS" starttime="20220406 21:20:40.471" endtime="20220406 21:20:54.702"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id=color</arg>
+<doc>Click button</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20220406 21:21:01.229" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="appium-screenshot-1.png"&gt;&lt;img src="appium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220406 21:20:59.550" endtime="20220406 21:21:01.230"/>
+</kw>
+<msg timestamp="20220406 21:20:55.637" level="INFO">'COLOR'.</msg>
+<msg timestamp="20220406 21:20:56.327" level="INFO">'GEOLOCATION'.</msg>
+<msg timestamp="20220406 21:20:57.015" level="INFO">'TEXT'.</msg>
+<msg timestamp="20220406 21:20:57.700" level="INFO">'NOTIFICATION'.</msg>
+<msg timestamp="20220406 21:20:58.462" level="INFO">'TOAST'.</msg>
+<msg timestamp="20220406 21:20:59.139" level="INFO">'SPEED TEST'.</msg>
+<msg timestamp="20220406 21:21:01.237" level="FAIL">TypeError: exceptions must derive from BaseException</msg>
+<status status="FAIL" starttime="20220406 21:20:54.703" endtime="20220406 21:21:01.237"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id=Text</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.238" endtime="20220406 21:21:01.238"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id=Toast</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.238" endtime="20220406 21:21:01.239"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id=Notification</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.239" endtime="20220406 21:21:01.239"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id=GeoLocation</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.239" endtime="20220406 21:21:01.240"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${delay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.240" endtime="20220406 21:21:01.240"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id=Speed Test</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.240" endtime="20220406 21:21:01.240"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${delay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.240" endtime="20220406 21:21:01.241"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id='start speed test - connection type multi'</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.241" endtime="20220406 21:21:01.241"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${delay}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.241" endtime="20220406 21:21:01.241"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id=Browser</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.241" endtime="20220406 21:21:01.242"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=Search</arg>
+<arg>https://lambdatest.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.242" endtime="20220406 21:21:01.242"/>
+</kw>
+<kw name="Click Button" library="AppiumLibrary">
+<arg>id=find</arg>
+<doc>Click button</doc>
+<status status="NOT RUN" starttime="20220406 21:21:01.242" endtime="20220406 21:21:01.242"/>
+</kw>
+<kw name="Close test app" library="Common" type="TEARDOWN">
+<kw name="Close All Applications" library="AppiumLibrary">
+<doc>Closes all open applications.</doc>
+<status status="PASS" starttime="20220406 21:21:01.244" endtime="20220406 21:21:01.470"/>
+</kw>
+<status status="PASS" starttime="20220406 21:21:01.243" endtime="20220406 21:21:01.470"/>
+</kw>
+<timeout value="50 minutes"/>
+<status status="FAIL" starttime="20220406 21:20:40.470" endtime="20220406 21:21:01.470">TypeError: exceptions must derive from BaseException</status>
+</test>
+<status status="FAIL" starttime="20220406 21:20:40.256" endtime="20220406 21:21:01.471"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Android">Android</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
