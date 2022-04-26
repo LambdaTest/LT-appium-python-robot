@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.8.9 on darwin)" generated="20220426 20:19:41.001" rpa="false" schemaversion="3">
+<suite id="s1" name="Android" source="/Users/shantanuw/Desktop/Python - Robot/Tests/Android.robot">
+<test id="s1-t1" name="Example of connecting to Lambdatest via Robot Framework" line="13">
+<kw name="Open test app" library="Common" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${platform}</arg>
+<arg>platformVersion=${version}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>app=${app}</arg>
+<arg>name=Robot Framework Sample Test</arg>
+<arg>build=Appium Python Robot</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20220426 20:19:41.118" endtime="20220426 20:19:54.916"/>
+</kw>
+<status status="PASS" starttime="20220426 20:19:41.118" endtime="20220426 20:19:54.917"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=color</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:19:54.921" level="INFO">Clicking element 'id=color'.</msg>
+<status status="PASS" starttime="20220426 20:19:54.917" endtime="20220426 20:20:05.869"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=Text</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:20:05.874" level="INFO">Clicking element 'id=Text'.</msg>
+<status status="PASS" starttime="20220426 20:20:05.869" endtime="20220426 20:20:16.820"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=toast</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:20:16.823" level="INFO">Clicking element 'id=toast'.</msg>
+<status status="PASS" starttime="20220426 20:20:16.820" endtime="20220426 20:20:27.573"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=notification</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:20:27.577" level="INFO">Clicking element 'id=notification'.</msg>
+<status status="PASS" starttime="20220426 20:20:27.573" endtime="20220426 20:20:38.345"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=geoLocation</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:20:38.351" level="INFO">Clicking element 'id=geoLocation'.</msg>
+<status status="PASS" starttime="20220426 20:20:38.346" endtime="20220426 20:20:49.074"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220426 20:20:54.076" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220426 20:20:49.074" endtime="20220426 20:20:54.076"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=Home</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:20:54.079" level="INFO">Clicking element 'id=Home'.</msg>
+<status status="PASS" starttime="20220426 20:20:54.076" endtime="20220426 20:21:05.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220426 20:21:10.149" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220426 20:21:05.147" endtime="20220426 20:21:10.149"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=speedTest</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:21:10.155" level="INFO">Clicking element 'id=speedTest'.</msg>
+<status status="PASS" starttime="20220426 20:21:10.150" endtime="20220426 20:21:20.972"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220426 20:21:25.974" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220426 20:21:20.973" endtime="20220426 20:21:25.975"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=Browser</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:21:25.980" level="INFO">Clicking element 'id=Browser'.</msg>
+<status status="PASS" starttime="20220426 20:21:25.975" endtime="20220426 20:21:37.128"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>id=url</arg>
+<arg>https://lambdatest.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20220426 20:21:37.133" level="INFO">Typing text 'https://lambdatest.com' into text field 'id=url'</msg>
+<status status="PASS" starttime="20220426 20:21:37.129" endtime="20220426 20:21:37.928"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=find</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20220426 20:21:37.934" level="INFO">Clicking element 'id=find'.</msg>
+<status status="PASS" starttime="20220426 20:21:37.929" endtime="20220426 20:21:48.782"/>
+</kw>
+<kw name="Close test app" library="Common" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20220426 20:21:48.785" endtime="20220426 20:21:49.166"/>
+</kw>
+<status status="PASS" starttime="20220426 20:21:48.784" endtime="20220426 20:21:49.166"/>
+</kw>
+<timeout value="50 minutes"/>
+<status status="PASS" starttime="20220426 20:19:41.117" endtime="20220426 20:21:49.166"/>
+</test>
+<status status="PASS" starttime="20220426 20:19:41.007" endtime="20220426 20:21:49.168"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Android">Android</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
