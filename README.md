@@ -55,7 +55,7 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 
 Replace LambdaTest `username` and `accesskey` in the `common.robot` file as mentioned below:
 
-```js title="common.robot"
+```bash title="common.robot"
 *** Settings ***
 Library  AppiumLibrary
 
