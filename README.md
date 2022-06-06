@@ -128,7 +128,7 @@ Once you are done with the above-mentioned steps, you can initiate your first Ro
 
 You need to update your capabilities in `Makefile` files. In this sample project, we have provided the examples for running tests on both **Android** and **iOS** apps. We are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code for a single test are defined as:
 
-```python title="Makefile"
+```bash title="Makefile"
 test_Android1:
 	robot --variable version:10 --variable platform:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable app:"lt://" Tests/Android.robot
 
