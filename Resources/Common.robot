@@ -5,7 +5,7 @@ Library  AppiumLibrary
 
 ${username}         username
 ${accesskey}        accesskey
-${REMOTE_URL}       https://${username}:${accesskey}@beta-hub.lambdatest.com/wd/hub
+${REMOTE_URL}       https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub
 ${TIMEOUT}          3000
 
 *** Keywords ***
