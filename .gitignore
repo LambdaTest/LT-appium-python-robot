@@ -130,3 +130,7 @@ dmypy.json
 /.idea/
 /report.html
 /log.html
+
+/output.xml
+log.html
+report.html

@@ -1,9 +1,9 @@
 *** Settings ***
 
-Resource  ../Resources/Common.robot
+Resource  ../Resources/AndroidCommon.robot
 
-Test Setup  Common.Open test app
-Test Teardown  Common.Close test app
+Test Setup  AndroidCommon.Open test app
+Test Teardown  AndroidCommon.Close test app
  
 *** Variables ***
 ${TIMEOUT}          3000
@@ -14,10 +14,10 @@ Example of connecting to Lambdatest via Robot Framework
 	[Timeout]   ${TIMEOUT}
 	Click button  id=color
 	Click button  id=Text
-	Click button  id=Toast
+	Click button  id=toast
 		
-	Click button  id=Notification
-	Click button  id=GeoLocation
+	Click button  id=notification
+	Click button  id=geoLocation
 	sleep	${delay}
 	Click button  id=Speed Test
 	sleep	${delay}
