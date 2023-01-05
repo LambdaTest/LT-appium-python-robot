@@ -28,7 +28,7 @@ ${TIMEOUT}          3000
 Open test app
     [Timeout]   ${TIMEOUT}
     #Open Application  ${REMOTE_URL}  platformName=${platformName}  platformVersion=${version}  deviceName=${deviceName}  visual=${visual}  network=${network}  isRealMobile=${isRealMobile}  name="RobotFramework Lambda Test"
-    Open Application   ${REMOTE_URL}   platformName=${platformName}   platformVersion=${version}   deviceName=${deviceName}   visual=${visual}   network=${network}   isRealMobile=${isRealMobile}   app=${app}   name="RobotFramework Lambda Test"
+    Open Application  ${REMOTE_URL}  platformName=${platformName}  platformVersion=${version}  deviceName=${deviceName}  visual=${visual}  network=${network}  isRealMobile=${isRealMobile}  app=${app}  name="RobotFramework Lambda Test"
 
 Close test app
     Close All Applications
