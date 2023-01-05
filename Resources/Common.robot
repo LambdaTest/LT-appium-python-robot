@@ -2,14 +2,11 @@
 Library  AppiumLibrary
 
 *** Variables ***
-env var
-    ${LT_USERNAME}=    Get Environment Variable    LT_USERNAME
-    ${LT_ACCESS_KEY}=    Get Environment Variable    LT_ACCESS_KEY
 
 @{_tmp}   
     ...   platformName: ${platformName}
     ...   platformVersion: ${version}
-    ...   deviceName:${deviceName}
+    ...   deviceName: ${deviceName}
     ...   visual: ${visual}
     ...   network: ${network}
     ...   isRealMobile: ${isRealMobile}
@@ -18,7 +15,7 @@ env var
 
 #${BROWSER}        ${ROBOT_BROWSER}
 ${CAPABILITIES}    ${EMPTY.join(${_tmp})}
-${REMOTE_URL}     https://${LT_USERNAME}:${LT_ACCESS_KEY}@mobile-hub.lambdatest.com/wd/hub
+${REMOTE_URL}     https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@mobile-hub.lambdatest.com/wd/hub
 #${app}            lt://APP100201841649255527998398
 ${app}             lt://proverbial-ios
 ${TIMEOUT}         3000
