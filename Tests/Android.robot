@@ -19,8 +19,6 @@ Example of connecting to Lambdatest via Robot Framework
 	Click element  id=notification
 	Click element  id=geoLocation
 	Sleep	2 seconds
-	Click element  id=Home
-	Sleep	2 seconds
 	Click element  id=speedTest
 	Sleep	2 seconds
 
