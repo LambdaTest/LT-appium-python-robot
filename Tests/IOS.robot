@@ -19,7 +19,4 @@ Example of connecting to Lambdatest via Robot Framework
 	Click element  id=notification
 	Click element  id=geoLocation
 	Sleep	2 seconds
-
-	Click element  id=Browser
-	Input Text   id=url	https://lambdatest.com
-	Click element  id=find
+	
