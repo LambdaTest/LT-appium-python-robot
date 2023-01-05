@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.10.8 on darwin)" generated="20230105 16:22:12.055" rpa="false" schemaversion="3">
-<suite id="s1" name="IOS" source="/Users/ankitagarwal/Documents/Code-Snippet/LT-appium-python-robot/Tests/IOS.robot">
+<robot generator="Robot 6.0.1 (Python 3.10.8 on darwin)" generated="20230105 16:24:09.199" rpa="false" schemaversion="3">
+<suite id="s1" name="Android" source="/Users/ankitagarwal/Documents/Code-Snippet/LT-appium-python-robot/Tests/Android.robot">
 <test id="s1-t1" name="Example of connecting to Lambdatest via Robot Framework" line="13">
-<kw name="Open test app" library="Common" type="SETUP">
+<kw name="Open test app" library="AndroidCommon" type="SETUP">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=${platformName}</arg>
@@ -21,26 +21,26 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | alias               | no     | alias             |</doc>
 <kw name="Capture Page Screenshot" library="AppiumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" starttime="20230105 16:22:18.192" endtime="20230105 16:22:18.193"/>
+<status status="FAIL" starttime="20230105 16:24:14.593" endtime="20230105 16:24:14.594"/>
 </kw>
-<msg timestamp="20230105 16:22:18.193" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<status status="FAIL" starttime="20230105 16:22:12.154" endtime="20230105 16:22:18.193"/>
+<msg timestamp="20230105 16:24:14.595" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" starttime="20230105 16:24:09.271" endtime="20230105 16:24:14.596"/>
 </kw>
 <timeout value="50 minutes"/>
-<status status="FAIL" starttime="20230105 16:22:12.154" endtime="20230105 16:22:18.193"/>
+<status status="FAIL" starttime="20230105 16:24:09.270" endtime="20230105 16:24:14.596"/>
 </kw>
-<kw name="Close test app" library="Common" type="TEARDOWN">
+<kw name="Close test app" library="AndroidCommon" type="TEARDOWN">
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20230105 16:22:18.194" endtime="20230105 16:22:18.195"/>
+<status status="PASS" starttime="20230105 16:24:14.596" endtime="20230105 16:24:14.598"/>
 </kw>
-<status status="PASS" starttime="20230105 16:22:18.194" endtime="20230105 16:22:18.195"/>
+<status status="PASS" starttime="20230105 16:24:14.596" endtime="20230105 16:24:14.598"/>
 </kw>
 <timeout value="50 minutes"/>
-<status status="FAIL" starttime="20230105 16:22:12.154" endtime="20230105 16:22:18.195">Setup failed:
+<status status="FAIL" starttime="20230105 16:24:09.270" endtime="20230105 16:24:14.598">Setup failed:
 Execution terminated by signal</status>
 </test>
-<status status="FAIL" starttime="20230105 16:22:12.056" endtime="20230105 16:22:18.195"/>
+<status status="FAIL" starttime="20230105 16:24:09.199" endtime="20230105 16:24:14.598"/>
 </suite>
 <statistics>
 <total>
@@ -49,10 +49,10 @@ Execution terminated by signal</status>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="IOS">IOS</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Android">Android</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20230105 16:22:18.193" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg timestamp="20230105 16:24:14.595" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 </errors>
 </robot>
