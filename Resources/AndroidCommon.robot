@@ -19,6 +19,7 @@ ${REMOTE_URL}       https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@mobile-hub.lambdates
 #${app}             lt://APP100201841649255527998398
 ${app}              lt://proverbial-android
 ${TIMEOUT}          3000
+${platformName}     ${platformName}
 
 *** Keywords ***
 
