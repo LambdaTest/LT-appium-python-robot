@@ -11,14 +11,14 @@ Library  AppiumLibrary
     ...   network: ${network}
     ...   isRealMobile: ${isRealMobile}
     ...   name: 'RobotFramework Lambda Test'
-    ...   app: 'lt://proverbial-ios'
+    ...   app: 'lt://proverbial-android'
 
-#${BROWSER}        ${ROBOT_BROWSER}
-${CAPABILITIES}    ${EMPTY.join(${_tmp})}
-${REMOTE_URL}     https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@mobile-hub.lambdatest.com/wd/hub
-#${app}            lt://APP100201841649255527998398
-${app}             lt://proverbial-ios
-${TIMEOUT}         3000
+#${BROWSER}         ${ROBOT_BROWSER}
+${CAPABILITIES}     ${EMPTY.join(${_tmp})}
+${REMOTE_URL}       https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@mobile-hub.lambdatest.com/wd/hub
+#${app}             lt://APP100201841649255527998398
+${app}              lt://proverbial-android
+${TIMEOUT}          3000
 
 *** Keywords ***
 

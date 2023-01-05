@@ -1,9 +1,9 @@
 *** Settings ***
 
-Resource  ../Resources/Common.robot
+Resource  ../Resources/AndroidCommon.robot
 
-Test Setup  Common.Open test app
-Test Teardown  Common.Close test app
+Test Setup  AndroidCommon.Open test app
+Test Teardown  AndroidCommon.Close test app
  
 *** Variables ***
 ${TIMEOUT}          3000

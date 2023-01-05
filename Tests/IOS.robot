@@ -12,9 +12,18 @@ ${TIMEOUT}          3000
 
 Example of connecting to Lambdatest via Robot Framework
 	[Timeout]   ${TIMEOUT}
-	Click element  id=color
-	Click element  id=Text
-	Click element  id=toast
-	Click element  id=notification
-	Click element  id=geoLocation
+	Click button  id=color
+	Click button  id=Text
+	Click button  id=toast
+		
+	Click button  id=notification
+	Click button  id=geoLocation
+	sleep	${delay}
+	Click button  id=Speed Test
+	sleep	${delay}
 
+	Click button  id='start speed test - connection type multi'
+	sleep	${delay}
+	Click button  id=Browser
+	Input Text   id=Search	https://lambdatest.com
+	Click button	id=find
