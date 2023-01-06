@@ -19,9 +19,11 @@ Example of connecting to Lambdatest via Robot Framework
 	Click element  id=notification
 	Click element  id=geoLocation
 	Sleep	2 seconds
-	Click element  id=speedTest
+	Click element  id=buttonPage
+	Sleep	2 seconds
+	Click element  xpath=//android.widget.Button[contains(@text,"SPEED TEST")]
 	Sleep	2 seconds
 
-	Click element  id=Browser
+	Click element  id=webview
 	Input Text   id=url	https://lambdatest.com
 	Click element  id=find

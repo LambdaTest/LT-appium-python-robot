@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.10.8 on darwin)" generated="20230105 20:32:48.483" rpa="false" schemaversion="3">
-<suite id="s1" name="IOS" source="/Users/ankitagarwal/Documents/Code-Snippet/LT-appium-python-robot/Tests/IOS.robot">
+<robot generator="Robot 6.0.1 (Python 3.10.8 on darwin)" generated="20230106 14:18:26.936" rpa="false" schemaversion="3">
+<suite id="s1" name="AndroidIosWeb" source="/Users/ankitagarwal/Documents/Code-Snippet/LT-appium-python-robot/Tests/AndroidIosWeb.robot">
 <test id="s1-t1" name="Example of connecting to Lambdatest via Robot Framework" line="13">
-<kw name="Open test app" library="Common" type="SETUP">
+<kw name="Open test app" library="CommonWeb" type="SETUP">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
-<arg>platformName=${platformName}</arg>
+<arg>platformName=android</arg>
 <arg>platformVersion=${version}</arg>
 <arg>deviceName=${deviceName}</arg>
 <arg>visual=${visual}</arg>
 <arg>network=${network}</arg>
 <arg>isRealMobile=${isRealMobile}</arg>
-<arg>app=${app}</arg>
 <arg>name="RobotFramework Lambda Test"</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
@@ -19,58 +18,57 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20230105 20:32:48.571" endtime="20230105 20:33:22.937"/>
+<status status="PASS" starttime="20230106 14:18:27.017" endtime="20230106 14:18:42.919"/>
 </kw>
 <timeout value="50 minutes"/>
-<status status="PASS" starttime="20230105 20:32:48.571" endtime="20230105 20:33:22.937"/>
+<status status="PASS" starttime="20230106 14:18:27.017" endtime="20230106 14:18:42.920"/>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=color</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230105 20:33:22.942" level="INFO">Clicking element 'id=color'.</msg>
-<status status="PASS" starttime="20230105 20:33:22.938" endtime="20230105 20:33:23.911"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=Text</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230105 20:33:23.914" level="INFO">Clicking element 'id=Text'.</msg>
-<status status="PASS" starttime="20230105 20:33:23.911" endtime="20230105 20:33:24.884"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=toast</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230105 20:33:24.886" level="INFO">Clicking element 'id=toast'.</msg>
-<status status="PASS" starttime="20230105 20:33:24.884" endtime="20230105 20:33:25.842"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=notification</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230105 20:33:25.844" level="INFO">Clicking element 'id=notification'.</msg>
-<status status="PASS" starttime="20230105 20:33:25.842" endtime="20230105 20:33:26.857"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=geoLocation</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230105 20:33:26.860" level="INFO">Clicking element 'id=geoLocation'.</msg>
-<status status="PASS" starttime="20230105 20:33:26.858" endtime="20230105 20:33:27.886"/>
+<kw name="Go To Url" library="AppiumLibrary">
+<arg>https://mfml.in/api/getInfo</arg>
+<doc>Opens URL in default web browser.</doc>
+<status status="PASS" starttime="20230106 14:18:42.920" endtime="20230106 14:18:46.821"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2 seconds</arg>
+<arg>10 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230105 20:33:29.888" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230105 20:33:27.886" endtime="20230105 20:33:29.888"/>
+<msg timestamp="20230106 14:18:56.822" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230106 14:18:46.821" endtime="20230106 14:18:56.824"/>
 </kw>
-<kw name="Close test app" library="Common" type="TEARDOWN">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=resolution</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230106 14:18:56.827" level="INFO">Clicking element 'id=resolution'.</msg>
+<status status="PASS" starttime="20230106 14:18:56.824" endtime="20230106 14:18:58.316"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=location</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230106 14:18:58.321" level="INFO">Clicking element 'id=location'.</msg>
+<status status="PASS" starttime="20230106 14:18:58.316" endtime="20230106 14:18:59.708"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=details</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230106 14:18:59.710" level="INFO">Clicking element 'id=details'.</msg>
+<status status="PASS" starttime="20230106 14:18:59.709" endtime="20230106 14:19:00.968"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>id=timezone</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230106 14:19:00.969" level="INFO">Clicking element 'id=timezone'.</msg>
+<status status="PASS" starttime="20230106 14:19:00.968" endtime="20230106 14:19:02.199"/>
+</kw>
+<kw name="Close test app" library="CommonWeb" type="TEARDOWN">
 <kw name="Close All Applications" library="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20230105 20:33:29.891" endtime="20230105 20:33:30.235"/>
+<status status="PASS" starttime="20230106 14:19:02.200" endtime="20230106 14:19:02.507"/>
 </kw>
-<status status="PASS" starttime="20230105 20:33:29.890" endtime="20230105 20:33:30.236"/>
+<status status="PASS" starttime="20230106 14:19:02.199" endtime="20230106 14:19:02.507"/>
 </kw>
 <timeout value="50 minutes"/>
-<status status="PASS" starttime="20230105 20:32:48.571" endtime="20230105 20:33:30.236"/>
+<status status="PASS" starttime="20230106 14:18:27.017" endtime="20230106 14:19:02.507"/>
 </test>
-<status status="PASS" starttime="20230105 20:32:48.484" endtime="20230105 20:33:30.237"/>
+<status status="PASS" starttime="20230106 14:18:26.937" endtime="20230106 14:19:02.508"/>
 </suite>
 <statistics>
 <total>
@@ -79,7 +77,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="IOS">IOS</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="AndroidIosWeb">AndroidIosWeb</stat>
 </suite>
 </statistics>
 <errors>
