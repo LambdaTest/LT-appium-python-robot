@@ -30,7 +30,11 @@ Open test app
     ...   isRealMobile=${isRealMobile}
     ...   name=LT_Appium_Robot_App_Android
     ...   build=LT_Appium_Robot_App_Automation
-    ${REMOTE_URL}=    Set Variable If    '%{LT_GRID_URL}' == ''    mobile-hub.lambdatest.com    %{LT_GRID_URL}
+    TRY
+        ${REMOTE_URL}=    Set Variable If    '%{LT_GRID_URL}' == ''    mobile-hub.lambdatest.com    %{LT_GRID_URL}
+    EXCEPT
+        ${REMOTE_URL}=    Set Variable    mobile-hub.lambdatest.com
+    END
     ${REMOTE_URL}=   Set Variable       https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@${REMOTE_URL}/wd/hub
 
     Open Application  ${REMOTE_URL}  platformName=${platformName}  platformVersion=${version}  deviceName=${deviceName}  visual=${visual}  console=${console}  network=${network}  devicelog=${devicelog}  isRealMobile=${isRealMobile}  name=LT_Appium_Robot_Web  build=LT_Appium_Robot_Web_Automation
