@@ -3,29 +3,45 @@ Library  AppiumLibrary
 
 *** Variables ***
 
-@{_tmp}   
-    ...   platformName: ${platformName}
-    ...   platformVersion: ${version}
-    ...   deviceName: ${deviceName}
-    ...   visual: ${visual}
-    ...   network: ${network}
-    ...   isRealMobile: ${isRealMobile}
-    ...   name: 'RobotFramework Lambda Test'
-    ...   app: 'lt://proverbial-ios'
+${platformName}         ios
+#${platformVersion}     15  # Set your default version
+${deviceName}           iPhone.*
+${visual}               True
+${network}              True
+${isRealMobile}         True
+${LT_APP_ID}            ''
+${LT_GRID_URL}          ''
+${TIMEOUT}              3000
 
-#${BROWSER}        ${ROBOT_BROWSER}
-${CAPABILITIES}    ${EMPTY.join(${_tmp})}
-${REMOTE_URL}     https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@mobile-hub.lambdatest.com/wd/hub
-#${app}            lt://APP100201841649255527998398
-${app}             lt://proverbial-ios
-${TIMEOUT}         3000
-${platformName}     ${platformName}
 
 *** Keywords ***
 
 Open test app
     [Timeout]   ${TIMEOUT}
-    Open Application  ${REMOTE_URL}  platformName=${platformName}  platformVersion=${version}  deviceName=${deviceName}  visual=${visual}  network=${network}  isRealMobile=${isRealMobile}  app=${app}  name="RobotFramework Lambda Test"
+    ${CAPABILITIES}=    Create Dictionary
+    ...   platformName=${platformName}
+    ...   platformVersion=${version}
+    ...   deviceName=${deviceName}
+    ...   visual=${visual}
+    ...   network=${network}
+    ...   devicelog=${devicelog}
+    ...   isRealMobile=${isRealMobile}
+    ...   name=LT_Appium_Robot_App_iOS
+    ...   build=LT_Appium_Robot_App_Automation
+    ...   app=${LT_APP_ID}
+    TRY
+        ${REMOTE_URL}=    Set Variable If    '%{LT_GRID_URL}' == ''    mobile-hub.lambdatest.com    %{LT_GRID_URL}
+    EXCEPT
+        ${REMOTE_URL}=    Set Variable    mobile-hub.lambdatest.com
+    END
+    TRY
+        ${APP_ID}=    Set Variable If    '%{LT_APP_ID}' == ''    lt://proverbial-ios    %{LT_APP_ID}
+    EXCEPT
+        ${APP_ID}=    Set Variable    lt://proverbial-ios
+    END
+    ${REMOTE_URL}=   Set Variable       https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@${REMOTE_URL}/wd/hub
+
+    Open Application  ${REMOTE_URL}  platformName=ios  platformVersion=${version}  deviceName=${deviceName}  visual=${visual}  network=${network}  devicelog=${devicelog}  isRealMobile=${isRealMobile}  app=${APP_ID}  name=LT_Appium_Robot_App_iOS  build=LT_Appium_Robot_App_Automation
 
 Close test app
     Close All Applications
