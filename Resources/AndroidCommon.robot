@@ -4,7 +4,7 @@ Library  AppiumLibrary
 *** Variables ***
 
 ${platformName}         android
-#${platformVersion}     12  # Set your default version
+${platformVersion}      12  # Set your default version
 ${deviceName}           Galaxy.*
 ${visual}               True
 ${network}              True
