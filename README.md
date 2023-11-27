@@ -156,7 +156,7 @@ Execute the following command to run your test on LambdaTest platform:
 <TabItem value="ios" label="iOS" default>
 
 ```bash
-make test_iOS1
+make test_ios1
 ```
 
 </TabItem>
