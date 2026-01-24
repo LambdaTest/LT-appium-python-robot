@@ -53,26 +53,20 @@ cd LT-appium-python-robot
 
 Make sure you have your LambdaTest credentials with you to run test automation scripts on LambdaTest. To obtain your access credentials, [purchase a plan](https://billing.lambdatest.com/billing/plans?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-python-robot) or access the [Automation Dashboard](https://appautomation.lambdatest.com/?utm_source=github&utm_medium=repo&utm_campaign=LT-appium-python-robot).
 
-Replace LambdaTest `username` and `accesskey` in the `common.robot` file as mentioned below:
+Set LambdaTest `Username` and `Access Key` in environment variables.
 
-```bash title="common.robot"
-*** Settings ***
-Library  AppiumLibrary
+**For Linux/macOS:**
 
-*** Variables ***
-// highlight-start
-${username}         username
-${accesskey}        accesskey
-// highlight-end
-${REMOTE_URL}       https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub
-${TIMEOUT}          3000
+```js
+export LT_USERNAME=YOUR_LAMBDATEST_USERNAME \
+export LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
+```
 
-*** Keywords ***
-Open test app
-    Open Application  ${REMOTE_URL}  platformName=${platform}  platformVersion=${version}  deviceName=${deviceName}  visual=${visual}  network=${network}  isRealMobile=${isRealMobile}   app=${app}   name=Robot Framework Sample Test    build=Appium Python Robot
+**For Windows:**
 
-Close test app
-    Close Application
+```js
+set LT_USERNAME=YOUR_LAMBDATEST_USERNAME 
+set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
 ```
 
 ### Upload Your Application
@@ -122,11 +116,11 @@ curl -u "YOUR_LAMBDATEST_USERNAME:YOUR_LAMBDATEST_ACCESS_KEY" -X POST "https://m
 
 Once you are done with the above-mentioned steps, you can initiate your first Robot test on LambdaTest.
 
-**Test Scenario:** Check out [Android.robot](https://github.com/LambdaTest/LT-appium-python-robot/blob/master/Tests/Android.robot) file to view the sample test script for android and [iOS.java](https://github.com/LambdaTest/LT-appium-python-robot/blob/master/Tests/IOS.robot) for iOS.
+**Test Scenario:** Check out [Android.robot](https://github.com/LambdaTest/LT-appium-python-robot/blob/master/Tests/Android.robot) file to view the sample test script for android and [IOS.robot](https://github.com/LambdaTest/LT-appium-python-robot/blob/master/Tests/IOS.robot) for iOS.
 
 ### Configuring Your Test Capabilities
 
-You need to update your capabilities in `Makefile` files. In this sample project, we have provided the examples for running tests on both **Android** and **iOS** apps. We are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code for a single test are defined as:
+You need to update your capabilities in the `Resources` files. In this sample project, we have provided the examples for running tests on both **Android** and **iOS** apps. We are passing platform name, platform version, device name and app url (generated earlier) along with other capabilities like build name and test name via capabilities object. The capabilities object in the sample code for a single test are defined as:
 
 ```bash title="Makefile"
 test_Android1:
@@ -156,7 +150,7 @@ Execute the following command to run your test on LambdaTest platform:
 <TabItem value="ios" label="iOS" default>
 
 ```bash
-make test_ios1
+robot .\Tests\IOS.robot
 ```
 
 </TabItem>
@@ -164,7 +158,7 @@ make test_ios1
 <TabItem value="android" label="Android" default>
 
 ```bash
-make test_Android1
+robot .\Tests\Android.robot
 ```
 
 </TabItem>

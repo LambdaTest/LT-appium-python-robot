@@ -2,8 +2,8 @@
 Library  AppiumLibrary
 
 *** Variables ***
-#${username}             username
-#${accesskey}            accesskey
+${username}             %{LT_USERNAME}
+${accesskey}            %{LT_ACCESS_KEY}
 ${LT_GRID_URL}          https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub
 ${platformName}         android
 ${platformVersion}      11  # Set your default version
@@ -31,12 +31,9 @@ Open test app
     ...   isRealMobile=${isRealMobile}
     ...   name=LT_Appium_Robot_App_Android
     ...   build=LT_Appium_Robot_App_Automation
-    TRY
-        ${REMOTE_URL}=    Set Variable If    '%{LT_GRID_URL}' == ''    mobile-hub.lambdatest.com    %{LT_GRID_URL}
-    EXCEPT
-        ${REMOTE_URL}=    Set Variable    mobile-hub.lambdatest.com
-    END
-    ${REMOTE_URL}=   Set Variable       https://${username}:${accesskey}@${REMOTE_URL}/wd/hub
+    
+
+     ${REMOTE_URL}=    Set Variable    https://${username}:${accesskey}@mobile-hub.lambdatest.com/wd/hub
 
     Open Application  ${REMOTE_URL}  platformName=${platformName}  platformVersion=${platformVersion}  deviceName=${deviceName}  visual=${visual}  console=${console}  network=${network}  devicelog=${devicelog}  isRealMobile=${isRealMobile}  name=LT_Appium_Robot_Web  build=LT_Appium_Robot_Web_Automation
 
