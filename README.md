@@ -55,6 +55,20 @@ Make sure you have your LambdaTest credentials with you to run test automation s
 
 Replace LambdaTest `username` and `accesskey` in the `common.robot` file as mentioned below:
 
+Set Environment Variables locally
+In your current terminal session, you need to set the LT_USERNAME and LT_ACCESS_KEY variables. Replace the placeholders with your actual credentials from the LambdaTest Automation Dashboard.
+
+For Windows (PowerShell):
+
+PowerShell
+$env:LT_USERNAME = "YOUR_LAMBDATEST_USERNAME"
+$env:LT_ACCESS_KEY = "YOUR_LAMBDATEST_ACCESS_KEY"
+For Windows (Command Prompt):
+
+DOS
+set LT_USERNAME=YOUR_LAMBDATEST_USERNAME
+set LT_ACCESS_KEY=YOUR_LAMBDATEST_ACCESS_KEY
+
 ```bash title="common.robot"
 *** Settings ***
 Library  AppiumLibrary
@@ -131,6 +145,10 @@ You need to update your capabilities in `Makefile` files. In this sample project
 ```bash title="Makefile"
 test_Android1:
 	robot --variable version:10 --variable platform:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable app:"lt://" Tests/Android.robot
+
+    or 
+
+    python -m robot --variable version:10 --variable platformName:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable devicelog:true --variable app:"lt://APP1016060991770561111757955" Tests/Android.robot
 
 test_iOS1:
 	robot --variable version:14 --variable platform:iOS --variable deviceName:"iPhone 11" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable app:"lt://" Tests/IOS.robot

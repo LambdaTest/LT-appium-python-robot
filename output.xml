@@ -1,74 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.10.8 on darwin)" generated="20230106 14:18:26.936" rpa="false" schemaversion="3">
-<suite id="s1" name="AndroidIosWeb" source="/Users/ankitagarwal/Documents/Code-Snippet/LT-appium-python-robot/Tests/AndroidIosWeb.robot">
+<robot generator="Robot 7.4.1 (Python 3.14.0 on win32)" generated="2026-02-17T01:20:40.509013" rpa="false" schemaversion="5">
+<suite id="s1" name="Android" source="C:\Users\namratab\LT-appium-python-robot\Tests\Android.robot">
 <test id="s1-t1" name="Example of connecting to Lambdatest via Robot Framework" line="13">
-<kw name="Open test app" library="CommonWeb" type="SETUP">
-<kw name="Open Application" library="AppiumLibrary">
+<kw name="Open test app" owner="AndroidCommon" type="SETUP">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-02-17T01:20:40.617128" level="INFO">${CAPABILITIES} = {'platformName': 'Android', 'platformVersion': '10', 'deviceName': 'Galaxy S20', 'visual': 'true', 'network': 'false', 'devicelog': 'true', 'isRealMobile': 'true', 'name': 'LT_Appium_Robot_App_Android...</msg>
+<var>${CAPABILITIES}</var>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${version}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>visual=${visual}</arg>
+<arg>network=${network}</arg>
+<arg>devicelog=${devicelog}</arg>
+<arg>isRealMobile=${isRealMobile}</arg>
+<arg>name=LT_Appium_Robot_App_Android</arg>
+<arg>build=LT_Appium_Robot_App_Automation</arg>
+<arg>app=${LT_APP_ID}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-02-17T01:20:40.616568" elapsed="0.000595"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-17T01:20:40.617782" level="FAIL">Environment variable '%{LT_GRID_URL}' not found.</msg>
+<var>${REMOTE_URL}</var>
+<arg>'%{LT_GRID_URL}' == ''</arg>
+<arg>mobile-hub.lambdatest.com</arg>
+<arg>%{LT_GRID_URL}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="FAIL" start="2026-02-17T01:20:40.617360" elapsed="0.000458">Environment variable '%{LT_GRID_URL}' not found.</status>
+</kw>
+<status status="FAIL" start="2026-02-17T01:20:40.617280" elapsed="0.000595">Environment variable '%{LT_GRID_URL}' not found.</status>
+</branch>
+<branch type="EXCEPT">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-17T01:20:40.620462" level="INFO">${REMOTE_URL} = mobile-hub.lambdatest.com</msg>
+<var>${REMOTE_URL}</var>
+<arg>mobile-hub.lambdatest.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-17T01:20:40.617974" elapsed="0.002523"/>
+</kw>
+<status status="PASS" start="2026-02-17T01:20:40.617916" elapsed="0.002625"/>
+</branch>
+<status status="PASS" start="2026-02-17T01:20:40.617247" elapsed="0.003333"/>
+</try>
+<try>
+<branch type="TRY">
+<kw name="Set Variable If" owner="BuiltIn">
+<msg time="2026-02-17T01:20:40.621170" level="FAIL">Environment variable '%{LT_APP_ID}' not found.</msg>
+<var>${APP_ID}</var>
+<arg>'%{LT_APP_ID}' == ''</arg>
+<arg>lt://proverbial-android</arg>
+<arg>%{LT_APP_ID}</arg>
+<doc>Sets variable based on the given condition.</doc>
+<status status="FAIL" start="2026-02-17T01:20:40.620721" elapsed="0.000477">Environment variable '%{LT_APP_ID}' not found.</status>
+</kw>
+<status status="FAIL" start="2026-02-17T01:20:40.620639" elapsed="0.000602">Environment variable '%{LT_APP_ID}' not found.</status>
+</branch>
+<branch type="EXCEPT">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-17T01:20:40.622016" level="INFO">${APP_ID} = lt://proverbial-android</msg>
+<var>${APP_ID}</var>
+<arg>lt://proverbial-android</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-17T01:20:40.621329" elapsed="0.000723"/>
+</kw>
+<status status="PASS" start="2026-02-17T01:20:40.621273" elapsed="0.000816"/>
+</branch>
+<status status="PASS" start="2026-02-17T01:20:40.620616" elapsed="0.001502"/>
+</try>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-17T01:20:40.623110" level="INFO">${REMOTE_URL} = https://namratabtestmuai:LT_PSoZP3yLuQ6v1kiUv0q0joiAgc8XQgk5qFUFxIorVxd0h05@mobile-hub.lambdatest.com/wd/hub</msg>
+<var>${REMOTE_URL}</var>
+<arg>https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@${REMOTE_URL}/wd/hub</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-17T01:20:40.622203" elapsed="0.000945"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=android</arg>
 <arg>platformVersion=${version}</arg>
 <arg>deviceName=${deviceName}</arg>
 <arg>visual=${visual}</arg>
 <arg>network=${network}</arg>
+<arg>devicelog=${devicelog}</arg>
 <arg>isRealMobile=${isRealMobile}</arg>
-<arg>name="RobotFramework Lambda Test"</arg>
+<arg>app=${APP_ID}</arg>
+<arg>name=LT_Appium_Robot_App_Android</arg>
+<arg>build=LT_Appium_Robot_App_Automation</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20230106 14:18:27.017" endtime="20230106 14:18:42.919"/>
+<status status="PASS" start="2026-02-17T01:20:40.623250" elapsed="26.293940"/>
 </kw>
 <timeout value="50 minutes"/>
-<status status="PASS" starttime="20230106 14:18:27.017" endtime="20230106 14:18:42.920"/>
+<status status="PASS" start="2026-02-17T01:20:40.616067" elapsed="26.301367"/>
 </kw>
-<kw name="Go To Url" library="AppiumLibrary">
-<arg>https://mfml.in/api/getInfo</arg>
-<doc>Opens URL in default web browser.</doc>
-<status status="PASS" starttime="20230106 14:18:42.920" endtime="20230106 14:18:46.821"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:06.920535" level="INFO">Clicking element 'id=color'.</msg>
+<arg>id=color</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2026-02-17T01:21:06.918171" elapsed="1.481709"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>10 seconds</arg>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:08.402446" level="INFO">Clicking element 'id=Text'.</msg>
+<arg>id=Text</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2026-02-17T01:21:08.400649" elapsed="1.268240"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:09.672112" level="INFO">Clicking element 'id=toast'.</msg>
+<arg>id=toast</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2026-02-17T01:21:09.669413" elapsed="1.297342"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:10.969969" level="INFO">Clicking element 'id=notification'.</msg>
+<arg>id=notification</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2026-02-17T01:21:10.967361" elapsed="1.444196"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:12.412867" level="INFO">Clicking element 'id=geoLocation'.</msg>
+<arg>id=geoLocation</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2026-02-17T01:21:12.411866" elapsed="2.634621"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-17T01:21:17.049236" level="INFO">Slept 2 seconds.</msg>
+<arg>2 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230106 14:18:56.822" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20230106 14:18:46.821" endtime="20230106 14:18:56.824"/>
+<status status="PASS" start="2026-02-17T01:21:15.047068" elapsed="2.002328"/>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=resolution</arg>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:17.052525" level="INFO">Clicking element 'id=buttonPage'.</msg>
+<arg>id=buttonPage</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230106 14:18:56.827" level="INFO">Clicking element 'id=resolution'.</msg>
-<status status="PASS" starttime="20230106 14:18:56.824" endtime="20230106 14:18:58.316"/>
+<status status="PASS" start="2026-02-17T01:21:17.050338" elapsed="2.663977"/>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=location</arg>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-17T01:21:21.717270" level="INFO">Slept 2 seconds.</msg>
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-17T01:21:19.714773" elapsed="2.002700"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:21.722349" level="INFO">Clicking element 'xpath=//android.widget.Button[contains(@text,"SPEED TEST")]'.</msg>
+<arg>xpath=//android.widget.Button[contains(@text,"SPEED TEST")]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230106 14:18:58.321" level="INFO">Clicking element 'id=location'.</msg>
-<status status="PASS" starttime="20230106 14:18:58.316" endtime="20230106 14:18:59.708"/>
+<status status="PASS" start="2026-02-17T01:21:21.719976" elapsed="1.626987"/>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=details</arg>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-17T01:21:25.350026" level="INFO">Slept 2 seconds.</msg>
+<arg>2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-17T01:21:23.348401" elapsed="2.001776"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:25.352176" level="INFO">Clicking element 'id=webview'.</msg>
+<arg>id=webview</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230106 14:18:59.710" level="INFO">Clicking element 'id=details'.</msg>
-<status status="PASS" starttime="20230106 14:18:59.709" endtime="20230106 14:19:00.968"/>
+<status status="PASS" start="2026-02-17T01:21:25.351049" elapsed="2.617519"/>
 </kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>id=timezone</arg>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:27.971767" level="INFO">Typing text 'https://lambdatest.com' into text field 'id=url'</msg>
+<arg>id=url</arg>
+<arg>https://lambdatest.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2026-02-17T01:21:27.969452" elapsed="1.619427"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-02-17T01:21:29.591552" level="INFO">Clicking element 'id=find'.</msg>
+<arg>id=find</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230106 14:19:00.969" level="INFO">Clicking element 'id=timezone'.</msg>
-<status status="PASS" starttime="20230106 14:19:00.968" endtime="20230106 14:19:02.199"/>
+<status status="PASS" start="2026-02-17T01:21:29.589826" elapsed="1.371547"/>
 </kw>
-<kw name="Close test app" library="CommonWeb" type="TEARDOWN">
-<kw name="Close All Applications" library="AppiumLibrary">
+<kw name="Close test app" owner="AndroidCommon" type="TEARDOWN">
+<kw name="Close All Applications" owner="AppiumLibrary">
 <doc>Closes all open applications.</doc>
-<status status="PASS" starttime="20230106 14:19:02.200" endtime="20230106 14:19:02.507"/>
+<status status="PASS" start="2026-02-17T01:21:30.962651" elapsed="0.328569"/>
 </kw>
-<status status="PASS" starttime="20230106 14:19:02.199" endtime="20230106 14:19:02.507"/>
+<status status="PASS" start="2026-02-17T01:21:30.962288" elapsed="0.329011"/>
 </kw>
 <timeout value="50 minutes"/>
-<status status="PASS" starttime="20230106 14:18:27.017" endtime="20230106 14:19:02.507"/>
+<status status="PASS" start="2026-02-17T01:20:40.615025" elapsed="50.676544"/>
 </test>
-<status status="PASS" starttime="20230106 14:18:26.937" endtime="20230106 14:19:02.508"/>
+<status status="PASS" start="2026-02-17T01:20:40.510239" elapsed="50.782034"/>
 </suite>
 <statistics>
 <total>
@@ -77,7 +197,7 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="AndroidIosWeb">AndroidIosWeb</stat>
+<stat name="Android" id="s1" pass="1" fail="0" skip="0">Android</stat>
 </suite>
 </statistics>
 <errors>

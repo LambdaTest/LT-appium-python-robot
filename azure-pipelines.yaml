@@ -1,0 +1,34 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  # Set these in the ADO UI as Secret Variables
+  LT_USERNAME: $(LT_USERNAME)
+  LT_ACCESS_KEY: $(LT_ACCESS_KEY)
+
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.x'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- script: |
+    # Example: Running the Android test target from the Makefile
+    make test_GalaxyS20Plus
+  displayName: 'Run LambdaTest Robot Tests'
+  env:
+    LT_USERNAME: $(LT_USERNAME)
+    LT_ACCESS_KEY: $(LT_ACCESS_KEY)
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/output.xml'
+    testRunTitle: 'Robot Framework Results'
+  condition: succeededOrFailed()
