@@ -2,7 +2,7 @@ run_all_in_parallel:
 	make -j test_GalaxyS20Plus #test_GalaxyS10
 
 test_GalaxyS20Plus:
-	robot --variable version:10 --variable platformName:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:true --variable devicelog:true Tests/Android.robot
+	python -m robot --variable version:10 --variable platformName:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable devicelog:true --variable app:"<your_app_id>" Tests/Android.robot
 
 test_GalaxyS10:
 	robot --variable version:10 --variable platformName:Android --variable deviceName:"Galaxy S10" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:true --variable devicelog:true Tests/Android.robot
