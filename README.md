@@ -144,14 +144,14 @@ You need to update your capabilities in `Makefile` files. In this sample project
 
 ```bash title="Makefile"
 test_Android1:
-	robot --variable version:10 --variable platform:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable app:"lt://" Tests/Android.robot
+	robot --variable version:10 --variable platform:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable app:"<your_app_id>" Tests/Android.robot
 
     or 
 
-    python -m robot --variable version:10 --variable platformName:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable devicelog:true --variable app:"lt://APP1016060991770561111757955" Tests/Android.robot
+    python -m robot --variable version:10 --variable platformName:Android --variable deviceName:"Galaxy S20" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable devicelog:true --variable app:"<your_app_id>" Tests/Android.robot
 
 test_iOS1:
-	robot --variable version:14 --variable platform:iOS --variable deviceName:"iPhone 11" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable app:"lt://" Tests/IOS.robot
+	robot --variable version:14 --variable platform:iOS --variable deviceName:"iPhone 11" --variable isRealMobile:true --variable visual:true --variable network:false --variable console:false --variable app:"<your_app_id>" Tests/IOS.robot
 ```
 
 **Info Note:**

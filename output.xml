@@ -70,7 +70,6 @@
 <status status="PASS" start="2026-02-17T01:20:40.620616" elapsed="0.001502"/>
 </try>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-02-17T01:20:40.623110" level="INFO">${REMOTE_URL} = https://namratabtestmuai:LT_PSoZP3yLuQ6v1kiUv0q0joiAgc8XQgk5qFUFxIorVxd0h05@mobile-hub.lambdatest.com/wd/hub</msg>
 <var>${REMOTE_URL}</var>
 <arg>https://%{LT_USERNAME}:%{LT_ACCESS_KEY}@${REMOTE_URL}/wd/hub</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
