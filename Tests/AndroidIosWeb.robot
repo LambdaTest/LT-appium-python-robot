@@ -13,8 +13,7 @@ ${TIMEOUT}          3000
 Example of connecting to Lambdatest via Robot Framework
 	[Timeout]   ${TIMEOUT}
 	Go To URL    https://mfml.in/api/getInfo
-	Sleep	10 seconds
-	Click element  id=resolution
-	Click element  id=location
-	Click element  id=details
-	Click element  id=timezone
+	Execute Script    document.getElementById('resolution').click();
+	Execute Script    document.getElementById('location').click();
+	Execute Script    document.getElementById('details').click();
+	Execute Script    document.getElementById('timezone').click();
