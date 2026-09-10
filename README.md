@@ -13,7 +13,7 @@
 With TestMu AI (Formerly LambdaTest), you can run Appium tests in Python using the Robot Framework across real mobile devices. This sample shows how to configure Python Robot Framework Appium tests to run on the TestMu AI Real Device Cloud.
 
 - [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
-- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) for the full setup walkthrough.
+- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/appium-python-robot/) for the full setup walkthrough.
 
 ### Prerequisites
 
